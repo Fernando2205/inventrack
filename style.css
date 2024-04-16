@@ -101,6 +101,8 @@ a:active {
 .lateral_side {
   background-color: #6600cc;
   width: 200px;
+  height: 520px;
+
 }
 
 .first_container {
@@ -210,7 +212,7 @@ a:active {
 
 h1 {
   margin-left: 280px;
-  margin-top: -400px;
+  margin-top: -50px;
   font-size: 30px;
 }
 
@@ -296,8 +298,9 @@ td.activo {
 
 /* Estilos de la tabla */
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
+  margin-left: 220px;
 }
 
 th, td {
@@ -327,6 +330,7 @@ th {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: -200px;
 }
 
 .buttons button {
@@ -343,6 +347,7 @@ th {
 .filters {
   display: flex;
   align-items: center;
+  margin-left: 250px;
 }
 
 .filters input[type="text"],
@@ -351,4 +356,39 @@ th {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-right: 10px;
+}
+.buttons{
+  margin-top: -70px;
+}
+/* Estilos del cuadro de selección */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\2713";
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.page_content{
+  margin-top: -410px;
+  margin-right: 40px;
 }
