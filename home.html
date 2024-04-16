@@ -3,25 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
   <title>Header</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">Logo</div>
+      <i class="fa-regular fa-bars"></i>
       <div class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
       </div>
       <div class="profile">
         <img src="profile.png" alt="Profile Picture">
       </div>
     </nav>
   </header>
+  <body>
+      <div class="containers">
+          <div class="lateral_side">
+              
+              <div class="first_container" id="lateral-inicio">
+                  <a href="home.html">
+                  <div class="icons">
+                    <i class="fa-solid fa-briefcase"></i>
+                      <p>Empleados</p>
+                  </div>
+                  <a href="inventario.html">
+                      <div class="icons">
+                          <i class="fa-solid fa-box"></i>
+                          <p>Inventario</p>
+                      </div>
+                  </a>
+              </div>
+                  <div class="icons">
+                      <i class="fa-solid fa-list"></i>
+                      <p>Salir</p>
+                  </div>
+              </div>
+          </div>
+    <div class="header">
+      <h1>Orders</h1>
+      <div class="buttons">
+        <button class="export">Export to excel</button>
+        <button class="import">Import Orders</button>
+        <button class="new">+ New Orders</button>
+      </div>
+    </div>
+    <div class="filters">
+      <input type="text" placeholder="Search...">
+      <select>
+        <option value="">Sales</option>
+        <!-- Más opciones -->
+      </select>
+      <select>
+        <option value="">Status</option>
+        <!-- Más opciones -->
+      </select>
+      <select>
+        <option value="">Filter</option>
+        <!-- Más opciones -->
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Customer</th>
+          <th>Sales channel</th>
+          <th>Destination</th>
+          <th>Items</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#7975</td>
+          <td>04/04/2022</td>
+          <td>Ramesh Choudhary</td>
+          <td>Store name</td>
+          <td>Jaipur</td>
+          <td>3</td>
+          <td><span class="completed">Completed</span></td>
+        </tr>
+        <tr>
+          <td>#7976</td>
+          <td>08/02/2022</td>
+          <td>Ramesh Choudhary</td>
+          <td>Store name</td>
+          <td>Jaipur</td>
+          <td>3</td>
+          <td><span class="pending">Pending</span></td>
+        </tr>
+        <!-- Más filas-->
+      </tbody>
+    </table>
+        
+          <script src="script.js"></script>
+  </body>
 </body>
 </html>

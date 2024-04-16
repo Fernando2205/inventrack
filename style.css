@@ -1,48 +1,354 @@
-/* Estilos generales */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos del menú */
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos del perfil */
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.fa-solid {
+  color: #bcb8b8;
+}
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilos del header */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Estilos del logo */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Estilos del menú */
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .menu li {
-    margin-right: 20px;
-  }
-  
-  .menu a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Estilos del perfil */
-  .profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
+  font-family: Arial, Helvetica, sans-serif
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos del menú */
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos del perfil */
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  padding: 15px 25px 0px 25px;
+  margin-bottom: 25px;
+}
+
+.lateral_side {
+  background-color: #6600cc;
+  width: 200px;
+}
+
+.first_container {
+  border-bottom: 1px solid white;
+  padding-top: 30px;
+}
+
+.second_container {
+  border-bottom: 1px solid white;
+  padding-bottom: 120px;
+  padding-top: 30px;
+}
+
+.third_container {
+  margin-top: 25px;
+}
+
+.lateral_side p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-bottom: 22px;
+  margin-left: 17px;
+}
+
+.icons:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+
+.fa-solid {
+  color: #ffffff;
+}
+
+.user_side {
+  display: flex;
+  padding-top: 25px;
+  margin-left: 20px;
+}
+
+#subtile {
+  color: #f4e6ef;
+  margin-top: -12px;
+  margin-left: 70px;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+#name_album {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.user_side img {
+  height: 35px;
+  border-radius: 26px;
+
+}
+
+.containers {
+  display: flex;
+}
+
+.items_main_container {
+  display: flex;
+  background-color: #8e6fc8;
+  width: 300px;
+  height: 80px;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#productos {
+  background-color: #d22d48;
+}
+
+#ventas {
+  background-color: #399627;
+}
+
+#box {
+  color: #ffffff;
+  font-size: 40px;
+  padding: 10px;
+}
+
+#number {
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+.box_item2 {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.box_info {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 280px;
+  margin-top: -400px;
+  font-size: 30px;
+}
+
+table {
+  margin-left: 140px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+td {
+  padding-left: 103px;
+  padding-bottom: 30px;
+
+}
+
+#titles_table {
+  font-weight: bolder;
+}
+
+.table_container {
+  margin-top: -700px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* offsetX offsetY blurRadius color */
+  width: 1200px;
+  padding-right: 30px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+td.activo {
+  background-color: #00bd00;
+  /* Fondo verde */
+  color: white;
+  /* Texto en color blanco */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  padding: 5px 10px;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+
+.main_container > .lateral_side {
+  flex: 0 0 200px;
+}
+
+.main_container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.main_container > div {
+  flex: 1;
+}
+
+.main_container > div h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para la lista de inventario */
+#lista-inventario div {
+  margin-bottom: 5px;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos de estado de pedido */
+.completed {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Estilos del encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Estilos de los filtros */
+.filters {
+  display: flex;
+  align-items: center;
+}
+
+.filters input[type="text"],
+.filters select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
