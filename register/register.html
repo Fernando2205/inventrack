@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="login">
+
+        <div class="login-image">
+            <img src="../assets/login-image.svg" alt="">
+        </div>
+
+        <form action="" class="form">
+            <img src="../assets/Rectangle 37.svg" alt="">
+            <p style="font-weight: 500; font-size: 24px; margin:10px 0  10px 0;">Registro</p>
+            <p style="color: #101540; margin-bottom: 10px;">Gestione eficazmente todo su inventario</p>
+            <p></p>
+            <!-- <div class="register-inputs"> -->
+            <section class="input-packed">
+                <div class="input-group">
+                    <label for="name">Nombre</label>
+                    <input id="name" type="text" placeholder="Ingresa tu nombre" class="input" required>
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Apellido</label>
+                    <input id="last-name" type="text" placeholder="Ingresa tu apellido" class="input" required>
+                </div>
+            </section>
+            <section class="input-packed">
+                <div class="input-group"><label for="email">E-mail</label>
+                    <input id="email" type="email" placeholder="Correo electrónico" class="input" required>
+                </div>
+                <div class="input-group"><label for="phone-number">Número telefónico</label>
+                    <input type="number" id="phone-number" placeholder="Ingresa tu número" class="input" required>
+                </div>
+            </section>
+            <section class="input-packed">
+                <div class="input-group">
+                    <label for="create-user">Usuario</label>
+                    <input style="margin-bottom: 10px;" type="text" id="create-user" class="input" placeholder="Usuario"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="create-password">Contraseña</label>
+                    <input type="password" id="create-password" placeholder="Minimo 8 carácteres" class="input" required
+                        minlength="8">
+
+                </div>
+            </section>
+
+            <!-- </div> -->
+            <input style="margin-bottom: 10px;" type="submit" class="login-btn">
+            <div class="createAccount">
+                <p>¿Ya tienes una cuenta?</p><a style="text-indent: 4px;" href="../index.html">Ingresa</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
