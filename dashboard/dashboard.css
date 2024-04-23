@@ -83,6 +83,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.5s;
 }
 
 .lateral_side p {

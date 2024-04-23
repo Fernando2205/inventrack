@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     barsIcon.addEventListener('click', function () {
         if (isHidden) {
-            lateralSide.style.display = 'flex';
+            // lateralSide.style.display = 'flex';
+            lateralSide.style.width = "20%";
             isHidden = false;
         } else {
-            lateralSide.style.display = 'none';
+            lateralSide.style.width = "0";
+            // lateralSide.style.display = 'none';
             isHidden = true;
         }
     });
