@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const barsIcon = document.querySelector('.fa-bars');
+document.addEventListener("DOMContentLoaded", function () {
+    const barsIcon = document.querySelector('#toggleChecker');
     const lateralSide = document.querySelector('.lateral_side');
     let isHidden = false;
 
-    barsIcon.addEventListener('click', function() {
+    barsIcon.addEventListener('click', function () {
         if (isHidden) {
             lateralSide.style.display = 'block';
             isHidden = false;
