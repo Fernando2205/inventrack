@@ -80,7 +80,9 @@ nav {
 .lateral_side {
   background-color: #101540;
   width: 20%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .lateral_side p {
