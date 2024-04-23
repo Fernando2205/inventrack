@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vmin;
+}
+
+
+/**Estilos para header**/
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    color: #101540;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+}
+
+.profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-left: 6px;
+}
+
+.profile {
+    display: flex;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.profile p {
+    margin-right: 10px;
+}
+
+.fa-magnifying-glass {
+    color: #101540;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-right: 20px;
+    background-color: #eaeaea;
+    margin-bottom: 11px;
+    border-radius: 6px;
+    width: 25px;
+}
+
+.fa-bell {
+    color: #101540;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.fa-caret-down {
+    margin-top: 6px;
+}
+
+.checkboxtoggler {
+    width: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+.line-1 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+.line-2 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+.line-3 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+#toggleChecker {
+    height: 3em;
+    width: 100%;
+    display: none;
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-1 {
+    -webkit-transform: rotate(0) translateY(0) translateX(-0);
+    -ms-transform: rotate(0) translateY(0) translateX(-0);
+    transform: rotate(0) translateY(0) translateX(0);
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-2 {
+    -webkit-transform: rotate(0) translateY(0em) translateX(0);
+    -ms-transform: rotate(0) translateY(0em) translateX(0);
+    transform: rotate(0) translateY(0em) translateX(0);
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-3 {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/**Estilos lateral side**/
+
+.lateral_side {
+    background-color: #101540;
+    width: 20%;
+    display: inline-block;
+}
+
+.lateral_side p {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.icons:hover {
+    cursor: pointer;
+    background-color: rgb(94, 94, 155);
+    border-radius: 5px;
+}
+
+.fa-table,
+.fa-table-list,
+.fa-boxes-stacked,
+.fa-money-bill-trend-up,
+.fa-rectangle-list,
+.fa-users {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.Lateral_side_sections {
+    margin-top: 40px;
+}
+
+.containers {
+    display: Flex;
+}
+
+.containers-content {
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+}
+
+
+/* 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+
+
+/*estilos para botones*/
+
+.order-buttons h1 {
+    font-weight: light;
+    color: #3e1040;
+}
+
+.order-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.export,
+.import {
+    border: 2px solid rgb(143, 0, 179);
+    font-size: 20px;
+    color: rgb(143, 0, 179);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.new {
+    border: 2px solid rgb(143, 0, 179);
+    background-color: rgb(143, 0, 179);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+}
