@@ -16,7 +16,7 @@ header {
   background-color: #ffffff;
   color: #000000;
   padding: 10px;
-  height: 60px;
+  height: 10%;
 }
 
 nav {
@@ -45,9 +45,9 @@ nav {
 }
 
 .profile {
+  width: 20%;
   display: flex;
-  margin-right: 30px;
-  margin-top: 10px;
+  justify-content: space-evenly;
 }
 
 .profile p {
@@ -92,8 +92,6 @@ nav {
 .icons {
   display: flex;
   gap: 10px;
-  padding: 10px;
-  margin-bottom: 30px;
 }
 
 
@@ -108,20 +106,20 @@ nav {
 .fa-boxes-stacked,
 .fa-money-bill-trend-up,
 .fa-rectangle-list,
-.fa-users {
+.fa-users,
+.fa-right-from-bracket {
   color: #ffffff;
   font-size: 26px;
 }
 
 
-.Lateral_side_sections {
-  margin-top: 40px;
-}
+.lateral_side_sections {}
 
 /**Containers estilos**/
 
 .containers {
   display: flex;
+  height: 90%;
 }
 
 .dashboard {
