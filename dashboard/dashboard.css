@@ -45,7 +45,7 @@ nav {
 }
 
 .profile {
-  width: 20%;
+
   display: flex;
   justify-content: space-evenly;
 }
@@ -78,8 +78,9 @@ nav {
 
 /**Estilos lateral side**/
 .lateral_side {
+  padding: 2px 0 2px 0;
   background-color: #101540;
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,16 +93,37 @@ nav {
   text-align: center;
 }
 
-.icons {
+.lateral_side a {
+  height: 10%;
+  padding: 10px;
+  align-items: center;
   display: flex;
   gap: 10px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.icons {
+  height: 10%;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  transition: 0.5s;
 }
 
 
-.icons:hover {
+.lateral_side .icons:hover,
+a:hover {
   cursor: pointer;
   background-color: rgb(94, 94, 155);
   border-radius: 5px;
+
+  p,
+  i {
+    transition: 0.5s;
+    scale: 1.1;
+  }
 }
 
 .fa-table,
@@ -115,8 +137,6 @@ nav {
   font-size: 26px;
 }
 
-
-.lateral_side_sections {}
 
 /**Containers estilos**/
 
@@ -133,8 +153,7 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   background-color: rgb(240, 240, 250);
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 20px;
   overflow: auto;
 }
 
@@ -142,26 +161,19 @@ nav {
   display: flex;
   justify-content: space-between;
   grid-column: 1 / -1;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  width: 95%;
+  width: 100%;
 }
 
 .stat {
   background-color: #ffffff;
   padding: 10px;
-  height: 90px;
-  text-align: center;
+  height: 100%;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.411);
-  margin-left: 20px;
-  width: 300px;
+  width: 22.5%;
 }
 
-.label,
-.sub_lable {
-  margin-right: 20px;
-}
+
 
 .fa-plus {
   color: rgb(25, 207, 25);
@@ -180,13 +192,12 @@ nav {
 .label {
   font-size: 14px;
   color: #000000;
-  margin-right: 120px;
   font-weight: bold;
 }
 
 /** imagen grafica barras estilo**/
 .chart {
-  width: 90%;
+  width: 55%;
   height: 100%;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.493);
@@ -201,19 +212,16 @@ nav {
 
 /** imagen grafica circular estilo**/
 .top-products {
-  width: 50%;
+  width: 42%;
   height: auto;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.494) 0px 2px 5px;
   padding: 30px;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 2px;
-  margin-left: 30px;
+
 }
 
-.top-products h3 {
-  margin-bottom: 10px;
-}
+.top-products h3 {}
 
 .circle {
   width: 100%;
@@ -227,26 +235,22 @@ nav {
 /*tabla stock y top selling*/
 .stock-alert {
   grid-column: 3 / span 2;
-  width: 100%;
+  width: 55%;
   height: auto;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.494) 0px 2px 5px;
   padding: 30px;
   background-color: rgb(255, 255, 255);
-  margin-top: 20px;
-  margin-bottom: 30px;
 }
 
 .Top-selling-Products {
-  width: 55%;
+  width: 42%;
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.493);
-  margin-left: 30px;
   padding: 30px;
-  margin-top: 20px;
+
   background-color: #ffffff;
-  margin-bottom: 30px;
   padding-left: 20px;
 }
 
@@ -273,16 +277,17 @@ nav {
 
 .board1,
 .board2 {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .boards {
-  display: inline-block;
-  padding-left: 20px;
+  display: flex;
   grid-column: 1 / -1;
-  margin-right: 60px;
+  gap: 20px;
+  flex-direction: column;
 }
-
 
 
 
