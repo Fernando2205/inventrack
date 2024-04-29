@@ -45,22 +45,17 @@ nav {
 }
 
 .profile {
-
+  width: 20%;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
-.profile p {
-  margin-right: 10px;
-}
+.profile p {}
 
 .fa-magnifying-glass {
   color: #101540;
-  margin-top: 5px;
   font-size: 20px;
-  margin-right: 20px;
-  background-color: #eaeaea;
-  margin-bottom: 11px;
   border-radius: 6px;
   width: 25px;
 }
