@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url(../general-styles.css);
+@import url(../css-components/general-styles.css);
+@import url(../css-components/lateral-side.css);
 
 * {
   margin: 0;
@@ -8,8 +8,9 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  height: 100vmin;
+
+main {
+  flex-direction: column;
 }
 
 /**Estilos para header**/
@@ -66,66 +67,6 @@ nav {
 
 .fa-caret-down {}
 
-/**Estilos lateral side**/
-.lateral_side {
-  padding: 2px 0 2px 0;
-  background-color: #101540;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.5s;
-}
-
-.lateral_side p {
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-}
-
-.lateral_side a {
-  height: 10%;
-  padding: 10px;
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  transition: 0.5s;
-  text-decoration: none;
-}
-
-.icons {
-  height: 10%;
-  padding: 10px;
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  transition: 0.5s;
-}
-
-
-.lateral_side .icons:hover,
-a:hover {
-  cursor: pointer;
-  background-color: rgb(94, 94, 155);
-  border-radius: 5px;
-
-  p,
-  i {
-    transition: 0.5s;
-    scale: 1.1;
-  }
-}
-
-.fa-table,
-.fa-table-list,
-.fa-boxes-stacked,
-.fa-money-bill-trend-up,
-.fa-rectangle-list,
-.fa-users,
-.fa-right-from-bracket {
-  color: #ffffff;
-  font-size: 26px;
-}
 
 
 /**Containers estilos**/
@@ -289,57 +230,4 @@ a:hover {
   flex-direction: column;
   gap: 0.7em;
   cursor: pointer;
-}
-
-.line-1 {
-  background: black;
-  height: 0.3em;
-  border-radius: 10em;
-  transition-duration: 500ms;
-  -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
-  -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
-  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
-}
-
-.line-2 {
-  background: black;
-  height: 0.3em;
-  border-radius: 10em;
-  transition-duration: 500ms;
-  -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
-  -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
-  transform: rotate(-45deg) translateY(0em) translateX(0.1em);
-
-}
-
-.line-3 {
-  background: black;
-  height: 0.3em;
-  border-radius: 10em;
-  transition-duration: 500ms;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-#toggleChecker {
-  height: 3em;
-  width: 100%;
-  display: none;
-}
-
-#toggleChecker:checked+#togglerLable .checkboxtoggler .line-1 {
-  -webkit-transform: rotate(0) translateY(0) translateX(-0);
-  -ms-transform: rotate(0) translateY(0) translateX(-0);
-  transform: rotate(0) translateY(0) translateX(0);
-}
-
-#toggleChecker:checked+#togglerLable .checkboxtoggler .line-2 {
-  -webkit-transform: rotate(0) translateY(0em) translateX(0);
-  -ms-transform: rotate(0) translateY(0em) translateX(0);
-  transform: rotate(0) translateY(0em) translateX(0);
-}
-
-#toggleChecker:checked+#togglerLable .checkboxtoggler .line-3 {
-  transform: scaleX(1);
-  transform-origin: left;
 }
