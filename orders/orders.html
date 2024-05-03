@@ -10,134 +10,137 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <input id="toggleChecker" type="checkbox">
-            <label id="togglerLable" for="toggleChecker">
-                <div class="checkboxtoggler">
-                    <div class="line-1"></div>
-                    <div class="line-2"></div>
-                    <div class="line-3"></div>
+    <main>
+        <header>
+            <nav>
+                <input id="toggleChecker" type="checkbox">
+                <label id="togglerLable" for="toggleChecker">
+                    <div class="checkboxtoggler">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div>
+                </label>
+                <div class="profile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bell"></i>
+                    <img src="https://i0.wp.com/www.stignatius.co.uk/wp-content/uploads/2020/10/default-user-icon.jpg?fit=415%2C415&ssl=1"
+                        alt="Profile Picture">
+                    <p>User Name</p>
+                    <i class="fa-solid fa-caret-down"></i>
                 </div>
-            </label>
-            <div class="profile">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-bell"></i>
-                <img src="https://i0.wp.com/www.stignatius.co.uk/wp-content/uploads/2020/10/default-user-icon.jpg?fit=415%2C415&ssl=1" alt="Profile Picture">
-                <p>User Name</p>
-                <i class="fa-solid fa-caret-down"></i>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
 
-    <div class="containers">
-        <div class="lateral_side">
-            <div class="Lateral_side_sections">
-                <div class="icons">
-                    <i class="fa-solid fa-table"></i>
-                    <p>Dashboard</p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-table-list"></i>
-                    <p>In Stock</p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-boxes-stacked"></i>
-                    <p>products</p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-money-bill-trend-up"></i>
-                    <p>Sales</p>
-                </div>
-                <div class="icons">
-                    <i class="fa-regular fa-rectangle-list"></i>
-                    <p>Orders</p>
-                </div>
-                <div class="icons">
-                    <i class="fa-solid fa-users"></i>
-                    <p>Users</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="containers-content">
-            <div class="page_content">
-                <div class="order-buttons">
-                    <h1>Ordenes</h1>
-                    <div class="buttons">
-                        <button class="export">Exportar a excel</button>
-                        <button class="import">Importar ordenes</button>
-                        <button class="new">+ Nuevas Ordenes</button>
+        <div class="containers">
+            <div class="lateral_side">
+                <div class="Lateral_side_sections">
+                    <div class="icons">
+                        <i class="fa-solid fa-table"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-table-list"></i>
+                        <p>In Stock</p>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <p>products</p>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <p>Sales</p>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <p>Orders</p>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Users</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="filters">
-                    <input type="text" placeholder="Search...">
-                    <select>
-            <option value="">Sales</option>
-            <!--  opciones -->
-          </select>
-                    <select>
-            <option value="">Status</option>
-          </select>
-                    <select>
-            <option value="">Filter</option>
-          </select>
-                </div>
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <label>
-                    <input type="checkbox">
-                  </label>
-                                </th>
-                                <th>Order ID</th>
-                                <th>Date</th>
-                                <th>Customer</th>
-                                <th>Sales channel</th>
-                                <th>Destination</th>
-                                <th>Items</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <label>
-                    <input type="checkbox">
-                  </label>
-                                </th>
-                                <td>#7975</td>
-                                <td>04/04/2022</td>
-                                <td>Ramesh Choudhary</td>
-                                <td>Store name</td>
-                                <td>Jaipur</td>
-                                <td>3</td>
-                                <td><span class="completed">Completed</span></td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label>
-                    <input type="checkbox">
-                  </label>
-                                </th>
-                                <td>#7976</td>
-                                <td>08/02/2022</td>
-                                <td>Ramesh Choudhary</td>
-                                <td>Store name</td>
-                                <td>Jaipur</td>
-                                <td>3</td>
-                                <td><span class="pending">Pending</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="containers-content">
+                <div class="page_content">
+                    <div class="order-buttons">
+                        <h1>Ordenes</h1>
+                        <div class="buttons">
+                            <button class="export">Exportar a excel</button>
+                            <button class="import">Importar ordenes</button>
+                            <button class="new">+ Nuevas Ordenes</button>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <input type="text" placeholder="Search...">
+                        <select>
+                            <option value="">Sales</option>
+                            <!--  opciones -->
+                        </select>
+                        <select>
+                            <option value="">Status</option>
+                        </select>
+                        <select>
+                            <option value="">Filter</option>
+                        </select>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Customer</th>
+                                    <th>Sales channel</th>
+                                    <th>Destination</th>
+                                    <th>Items</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7975</td>
+                                    <td>04/04/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7976</td>
+                                    <td>08/02/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="orders.js"></script>
 </body>
 

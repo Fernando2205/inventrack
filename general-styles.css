@@ -9,10 +9,13 @@
 
 body {
     background-color: #EDF0F2;
-    /* min-height: 100vh; */
-    height: 100vmin;
-    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+
 }
