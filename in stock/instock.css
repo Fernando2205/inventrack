@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vmin;
+}
+
+
+/**Estilos para header**/
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.fa-bars {
+    color: #101540;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-left: 6px;
+}
+
+.profile {
+    display: flex;
+
+}
+
+.profile p {
+    margin-right: 10px;
+}
+
+.fa-magnifying-glass {
+    color: #101540;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-right: 20px;
+    background-color: #eaeaea;
+    margin-bottom: 11px;
+    border-radius: 6px;
+    width: 25px;
+}
+
+.fa-bell {
+    color: #101540;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.fa-caret-down {
+    margin-top: 6px;
+}
+.fa-caret-down:hover {
+    cursor: pointer;
+}
+.checkboxtoggler {
+    width: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+.line-1 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+}
+
+.line-2 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+}
+
+.line-3 {
+    background: black;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+#toggleChecker {
+    height: 3em;
+    width: 100%;
+    display: none;
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-1 {
+    -webkit-transform: rotate(0) translateY(0) translateX(-0);
+    -ms-transform: rotate(0) translateY(0) translateX(-0);
+    transform: rotate(0) translateY(0) translateX(0);
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-2 {
+    -webkit-transform: rotate(0) translateY(0em) translateX(0);
+    -ms-transform: rotate(0) translateY(0em) translateX(0);
+    transform: rotate(0) translateY(0em) translateX(0);
+}
+
+#toggleChecker:checked+#togglerLable .checkboxtoggler .line-3 {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.order-buttons {
+    /* Existing styles */
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .category {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 14px;
+  }
+/*menu usuario*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.452);
+    z-index: 1;
+    right: 0; /* Alinea el menú a la derecha */
+    top: 10%; /* Posiciona el menú debajo del elemento padre */
+  }
+  
+  .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .show {
+    display: block;
+  }
+/**Estilos lateral side**/
+
+.lateral_side {
+    background-color: #1565C0;
+    width: 20%;
+    display: inline-block;
+}
+
+.lateral_side p {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.icons:hover {
+    cursor: pointer;
+    background-color: rgb(126, 94, 155);
+    border-radius: 5px;
+}
+
+.fa-table,
+.fa-table-list,
+.fa-boxes-stacked,
+.fa-money-bill-trend-up,
+.fa-rectangle-list,
+.fa-users {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.Lateral_side_sections {
+    margin-top: 40px;
+}
+
+.containers {
+    display: Flex;
+}
+
+.containers-content {
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+}
+.page_content {
+background-color: #fff;
+margin: 20px;}
+
+/* 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+
+
+/*estilos para botones*/
+
+.order-buttons h1 {
+    font-weight: light;
+    color: #1565C0;
+}
+
+.order-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.new {
+    border: 2px solid #1565C0;
+    background-color: #1565C0;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+}
+ /*filtros*/
+ .filters {
+  display: flex;
+  align-items: center;
+  margin: 30px 30px 30px 30px;
+  justify-content:space-between;
+}
+
+.filters input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 40%;
+}
+
+#buttom-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#buttom-filter select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  background-color: #fff;
+}
+/*Search*/
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    min-width: 32rem;
+}
+
+.input {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 8px;
+    outline: none;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #777;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #777;
+    width: 1rem;
+    height: 1rem;
+}  
+/*Estilos para la tabla*/
+.order-table {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  border-top: 1px solid rgb(207, 207, 207);
+}
+
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
