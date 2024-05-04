@@ -35,8 +35,7 @@
 }
 
 
-.lateral_side .icons:hover,
-a:hover {
+.lateral_side a:hover {
     cursor: pointer;
     background-color: rgb(94, 94, 155);
     border-radius: 5px;

@@ -1,73 +1,11 @@
 @import url(../css-components/general-styles.css);
+@import url(../css-components/header.css);
 @import url(../css-components/lateral-side.css);
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 
 main {
   flex-direction: column;
 }
-
-/**Estilos para header**/
-header {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 10px;
-  height: 10%;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fa-bars {
-  color: #101540;
-  font-size: 36px;
-  margin-left: 50px;
-  margin-top: 5px;
-}
-
-.fa-bars:hover {
-  cursor: pointer;
-}
-
-.profile img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.profile {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.profile p {}
-
-.fa-magnifying-glass {
-  color: #101540;
-  font-size: 20px;
-  border-radius: 6px;
-  width: 25px;
-}
-
-.fa-bell {
-  color: #101540;
-  font-size: 20px;
-}
-
-.fa-caret-down {}
-
-
 
 /**Containers estilos**/
 
