@@ -1,12 +1,12 @@
 /**Estilos para header**/
-header {
+.main_header {
     background-color: #ffffff;
     color: #000000;
     padding: 10px;
     height: 10%;
 }
 
-nav {
+.main_nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,6 @@ nav {
     justify-content: space-evenly;
 }
 
-.profile p {}
 
 .fa-magnifying-glass {
     color: #101540;

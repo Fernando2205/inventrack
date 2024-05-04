@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     barsIcon.addEventListener('click', function () {
         if (isHidden) {
             // lateralSide.style.display = 'flex';
-            lateralSide.style.width = "20%";
+            lateralSide.style.width = "25%";
             isHidden = false;
         } else {
             lateralSide.style.width = "0";
