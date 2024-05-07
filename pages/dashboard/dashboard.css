@@ -1,6 +1,6 @@
-@import url(../css-components/general-styles.css);
-@import url(../css-components/header.css);
-@import url(../css-components/lateral-side.css);
+@import url(../../css/general-styles.css);
+@import url(../../css/header.css);
+@import url(../../css/aside.css);
 
 
 main {

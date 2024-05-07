@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenes</title>
+    <link rel="stylesheet" href="orders.css">
+</head>
+
+<body>
+    <main>
+        <header class="main_header">
+            <nav class="main_nav">
+                <input id="toggleChecker" type="checkbox">
+                <label id="togglerLable" for="toggleChecker">
+                    <div class="checkboxtoggler">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div>
+                </label>
+                <div class="profile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bell"></i>
+                    <img src="https://i0.wp.com/www.stignatius.co.uk/wp-content/uploads/2020/10/default-user-icon.jpg?fit=415%2C415&ssl=1"
+                        alt="Profile Picture">
+                    <p>User Name</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </nav>
+        </header>
+        <div class="containers">
+            <div class="lateral_side">
+                <a href="../dashboard/dashboard.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-table"></i>
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="../stock/instock.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-table-list"></i>
+                        <p>En stock</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <p>Productos</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <p>Ventas</p>
+                    </div>
+                </a>
+
+                <a href="../orders/orders.html">
+                    <div class="icons">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <p>Ordenes</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="icons">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Usuarios</p>
+                    </div>
+                </a>
+                <a href="../login/login.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Salir</p>
+                    </div>
+                </a>
+            </div>
+            <div class="content">
+                <div class="page_content">
+                    <div class="order-buttons">
+                        <h2>Ordenes</h2>
+                        <div class="buttons">
+                            <button class="export">Exportar a excel</button>
+                            <button class="import">Importar ordenes</button>
+                            <button class="new">+ Nuevas Ordenes</button>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <div class="group">
+                            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <g>
+                                    <path
+                                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <input placeholder="Buscar" type="search" class="filter_input">
+                        </div>
+
+                        <div id="buttom-filter">
+                            <select>
+                                <option value="">Ventas</option>
+
+                            </select>
+                            <select>
+                                <option value="">Estado</option>
+                            </select>
+                            <select>
+                                <option value="">Filtrar</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="order-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <th>Orden ID</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Canal de ventas</th>
+                                    <th>Destino</th>
+                                    <th>Articulos</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7975</td>
+                                    <td>04/04/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7976</td>
+                                    <td>08/02/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7976</td>
+                                    <td>08/02/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7976</td>
+                                    <td>08/02/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox">
+                                        </label>
+                                    </th>
+                                    <td>#7976</td>
+                                    <td>08/02/2022</td>
+                                    <td>Ramesh Choudhary</td>
+                                    <td>Store name</td>
+                                    <td>Jaipur</td>
+                                    <td>3</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
+    <script src="../../JS/hideLateral.js"></script>
+</body>
+
+</html>
