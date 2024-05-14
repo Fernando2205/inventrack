@@ -3,5 +3,5 @@ const users = [{ name: 'Delio', lastName: 'Palacios', email: 'delio@correo.com',
 { name: 'Dana', lastName: 'Rodriguez', email: 'dana@correo.com', phoneNumber: '1234567890', username: 'dana123', password: 'contra123' },
 ];
 
-//Transformamos el objeto users a un string ya que local storage solo admite dos strings como parametros (clave y valor)
+//Transformamos el arreglo users a un string ya que local storage solo admite dos strings como parametros (clave y valor)
 localStorage.setItem('users', JSON.stringify(users));
