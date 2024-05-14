@@ -1,15 +1,12 @@
-import { registerUser } from './userManager.js';
+import { registerUser } from './userManager.js';//Se importa la funcion de registro para poder utilizarla
 
-const signupForm = document.querySelector("#sumbit-register");
-const messagesDiv = document.querySelector("#alert-message"); // Asumiendo que tienes un elemento con el id "alert-message" para mostrar los mensajes
+const signupForm = document.querySelector("#sumbit-register");//Extraemos el formulario de registor mediante su Id
 
-function showMessage(message, type) {
-    messagesDiv.innerHTML = `<p class="${type}">${message}</p>`;
-}
-
+//Evento de envio del formulario
 signupForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault();//Evitamos la accion por defecto del formulario
 
+    //Obtenemos los datos de cada campo del formulario
     const name = document.querySelector("#name").value;
     const lastName = document.querySelector("#last-name").value;
     const email = document.querySelector('#email').value;
@@ -17,6 +14,7 @@ signupForm.addEventListener("submit", (e) => {
     const username = document.querySelector('#create-user').value;
     const password = document.querySelector('#create-password').value;
 
+    //Creamos un objeto para el usuario que vamos a agregar con los datos que extraimos del formulario
     const newUser = {
         name,
         lastName,
@@ -26,14 +24,15 @@ signupForm.addEventListener("submit", (e) => {
         password
     };
 
+    //Registramos al usuario (ya la funcion de registro implementa la funcion de validacion de usuario existente)
     const result = registerUser(newUser);
+
     if (result.success) {
+        //Si el registro se pudo realizar informamos con una alerta y redirigimos a la página de login
         alert(result.message);
         window.location.href = '../login/login.html'
-
-
         e.target.reset();
-    } else {
+    } else {//En caso de que no se haya podido registrar el usuario mostramos el mensaje correspondiente
         alert(result.message);
     }
 });
