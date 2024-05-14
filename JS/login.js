@@ -13,10 +13,13 @@ loginForm.addEventListener('submit', (e) => {
     //Se busca que el usuario y contraseña existan dentro del localStorage
     const user = users.find(u => u.username === username && u.password === password);
 
+    console.log(user)
+
     if (user) {
         //Si existen el usuario y contraseña ingresados se muestra alerta de inicio de sesion exitoso y se redirige a la pagina principal
         alert('Inicio de sesión exitoso');
-        window.location.href = '../pages/dashboard/dashboard.html'
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        window.location.href = '../pages/dashboard/dashboard.html';
     } else {
         //Si el usuario y contraseña no existen se alerta al usuario
         alert('Usuario o contraseña incorrectos',);
