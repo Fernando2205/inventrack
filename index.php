@@ -1,17 +1,25 @@
 <?php
+// Verifica si una sesión ya está iniciada antes de iniciar una nueva sesión
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Incluye el archivo de configuración que contiene la configuración del cliente de Google.
+$nonce_value = bin2hex(random_bytes(16));
+
 include('config.php');
 
 // Inicializa una variable para el botón de inicio de sesión.
 $login_button = "";
 
+//iniciar sesion con google
 // Verifica si se recibió el código de autenticación de Google.
-if(isset($_GET["code"])) {
+if (isset($_GET["code"])) {
     // Obtiene el token de acceso de Google con el código de autenticación.
     $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
     
     // Si no hay ningún error en el token
-    if(!isset($token['error'])) {
+    if (!isset($token['error'])) {
         // Establece el token de acceso para el cliente de Google.
         $google_client->setAccessToken($token['access_token']);
         
@@ -25,24 +33,14 @@ if(isset($_GET["code"])) {
         $data = $google_service->userinfo->get();
         
         // Almacena la información del usuario en la sesión.
-        if(!empty($data['given_name'])) {
-            $_SESSION['user_first_name'] = $data['given_name'];
-        }
-        
-        if(!empty($data['family_name'])) {
-            $_SESSION['user_last_name'] = $data['family_name'];
-        }
-        
-        if(!empty($data['email'])) {
-            $_SESSION['user_email_address'] = $data['email'];
-        }
-        
-        if(!empty($data['picture'])) {
-            $_SESSION['user_image'] = $data['picture'];
-        }
+        $_SESSION['user_first_name'] = $data['given_name'];
+        $_SESSION['user_last_name'] = $data['family_name'];
+        $_SESSION['user_email_address'] = $data['email'];
+        $_SESSION['user_image'] = $data['picture'];
+        $_SESSION['login_user'] = true;
         
         // Verifica si el usuario ya existe en la base de datos
-        $check_user_query = "SELECT * FROM users WHERE google_id = '".$data['id']."'";
+        $check_user_query = "SELECT * FROM google_users WHERE google_id = '".$data['id']."'";
         $result = $conn->query($check_user_query);
         
         if ($result->num_rows == 0) {
@@ -51,8 +49,8 @@ if(isset($_GET["code"])) {
             $conn->query($insert_user_query);
         }
 
-        // Redirige al usuario a la página de inicio de sesión.
-        header("Location: login.php");
+        // Redirige al usuario a la página de dashboard
+        header("Location: pages/dashboard/dashboard.html");
         exit;
     }
 }
@@ -61,6 +59,33 @@ if(isset($_GET["code"])) {
 if (!isset($_SESSION['access_token'])) {
     // Si el token de acceso no está establecido, se crea el botón de inicio de sesión de Google.
     $login_button = '<a href="' . $google_client->createAuthUrl() . '" class="login-button"><span></span>Iniciar con Gmail</a>';
+}
+
+//  inicio de sesión con Facebook
+if (isset($_GET['facebook_user_data'])) {
+    // Obtener datos del usuario de Facebook
+    $facebook_user_data = json_decode($_GET['facebook_user_data'], true);
+
+    // Almacenar la información del usuario en la sesión
+    $_SESSION['user_first_name'] = $facebook_user_data['first_name'];
+    $_SESSION['user_last_name'] = $facebook_user_data['last_name'];
+    $_SESSION['user_email_address'] = $facebook_user_data['email'];
+    $_SESSION['user_image'] = $facebook_user_data['picture']['data']['url'];
+    $_SESSION['login_user'] = true;
+
+    // Verificar si el usuario ya existe en la base de datos
+    $check_user_query = "SELECT * FROM facebook_users WHERE facebook_id = '" . $facebook_user_data['id'] . "'";
+    $result = $conn->query($check_user_query);
+
+    if ($result->num_rows == 0) {
+        // Si el usuario no existe, insértalo en la base de datos
+        $insert_user_query = "INSERT INTO facebook_users (facebook_id, first_name, last_name, email, picture) VALUES ('" . $facebook_user_data['id'] . "', '" . $facebook_user_data['first_name'] . "', '" . $facebook_user_data['last_name'] . "', '" . $facebook_user_data['email'] . "', '" . $facebook_user_data['picture']['data']['url'] . "')";
+        $conn->query($insert_user_query);
+    }
+
+    // Redirigir al usuario a dashboard.html
+    header("Location: pages/dashboard/dashboard.html");
+    exit;
 }
 ?>
 
@@ -73,50 +98,9 @@ if (!isset($_SESSION['access_token'])) {
     <title>Ingresar</title>
     <link rel="stylesheet" href="login/login.css">
     <link rel="stylesheet" href="css/alert-message.css">
+    <link rel="stylesheet" href="css/botones_login.css">
 </head>
-<style>
-    /* Estilos para el botón de iniciar sesión */
-    .login-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        background-color: #fff;
-        color: rgba(0, 0, 0, 0.54);
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0.2px;
-        border-radius: 2px;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
-        transition: background-color 0.2s ease, box-shadow 0.2s ease;
-        text-decoration: none;
-        height: 40px;
-        line-height: 40px;
-        cursor: pointer;
-    }
 
-    .login-button:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    }
-
-    .login-button span {
-        display: inline-flex;
-        align-items: center;
-        padding-right: 8px;
-    }
-
-    .login-button span::before {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
-        background-size: cover;
-        margin-right: 8px;
-    }
-</style>
 <body>
     <main>
         <div class="login">
@@ -128,21 +112,32 @@ if (!isset($_SESSION['access_token'])) {
                 <label for="password">Contraseña*</label>
                 <input type="password" id="password" placeholder="Ingresa tu contraseña" class="input" required>
                 <button type="submit" class="login-btn">Ingresar</button>
-                <div class="createAccount">
+               
+                <!-- Botón de inicio de sesión con Google -->
+                <div class="button-container">
+                    <div class="google-login">
+                        <?php
+                        echo '<div align="center">' . $login_button . '</div>';
+                        ?>
+                    </div>
+                    <div class="facebook-login">
+                    <button onclick="checkLoginState();" class="fb-login-button-custom"> <img src="https://i0.wp.com/showmeleb.com/wp-content/uploads/2020/06/facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png-32.png?ssl=1" alt="Facebook Logo" class="fb-logo"> Iniciar con Facebook
+                    </button>
+                </div>
+            </div>
+            <div class="createAccount">
                     <p>¿No se ha registrado aún?</p><a href="register/register.html">Crea una nueva cuenta</a>
                 </div>
-                <!-- Botón de inicio de sesión con Google -->
-                <div class="google-login">
-                    <?php
-                    echo '<div align="center">' . $login_button . '</div>';
-                    ?>
-                </div>
+            <div id="status"></div>
             </form>
             <div class="login-image">
                 <img src="assets/login-image.svg" alt="">
             </div>
         </div>
     </main>
-    <script type="module" src="JS/login.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0&appId=1298268964893456&autoLogAppEvents=1"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/facebookLogin.js"></script>
 </body>
+
 </html>
