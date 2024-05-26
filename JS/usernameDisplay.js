@@ -1,3 +1,3 @@
 const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 const usernameDisplay = document.querySelector('#usernameDisplay');
-usernameDisplay.textContent = `${loggedInUser.name}`;
+usernameDisplay.textContent =`${loggedInUser.name}`;

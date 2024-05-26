@@ -30,7 +30,7 @@ signupForm.addEventListener("submit", (e) => {
     if (result.success) {
         //Si el registro se pudo realizar informamos con una alerta y redirigimos a la página de login
         alert(result.message);
-        window.location.href = '../login/login.html'
+        window.location.href = 'https://inventrack.com';
         e.target.reset();
     } else {//En caso de que no se haya podido registrar el usuario mostramos el mensaje correspondiente
         alert(result.message);

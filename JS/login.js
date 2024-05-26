@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', (e) => {
         //Si existen el usuario y contraseña ingresados se muestra alerta de inicio de sesion exitoso y se redirige a la pagina principal
         alert('Inicio de sesión exitoso');
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        window.location.href = '../pages/dashboard/dashboard.html';
+        window.location.href = 'pages/dashboard/dashboard.html';
     } else {
         //Si el usuario y contraseña no existen se alerta al usuario
         alert('Usuario o contraseña incorrectos',);
