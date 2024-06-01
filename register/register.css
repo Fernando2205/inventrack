@@ -1,0 +1,115 @@
+@import url(../css/general-styles.css);
+/* .login form,
+.login img {
+    border: red 2px solid;
+} */
+
+.login {
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    border-radius: 12px;
+    max-height: 640px;
+    margin: auto;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 20px;
+    width: 70%;
+    max-width: 70%;
+    max-height: 100%;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 500;
+    color: #101540;
+}
+
+
+.input {
+    border-radius: 4px;
+    border: none;
+    border: 1px solid #c6c8ca;
+    background-color: #EDF0F2;
+    height: 48px;
+    max-height: 5vmax;
+    padding-left: 10px;
+    /* width: 200px; */
+}
+
+
+.input-packed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    max-width: 50%;
+    width: 50%;
+
+}
+
+.input-group input {
+    width: 97%;
+    max-width: 340px;
+}
+
+/* input::placeholder {
+    padding-left: 10px;
+} */
+
+.login-btn {
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    width: 200px;
+    height: 45px;
+    max-height: 4vmax;
+    font-size: 14px;
+    color: white;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #101540;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+}
+
+.createAccount {
+    gap: 4px;
+    color: #131313;
+    font-weight: 600;
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.createAccount a {
+    color: #101540;
+    text-decoration: none;
+}
+
+
+.login form img {
+    width: 32px;
+    height: 32px;
+}
+
+.login-image {
+    padding: 20px;
+    width: 30%;
+    height: 100%;
+}
+
+.login-image img {
+
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}

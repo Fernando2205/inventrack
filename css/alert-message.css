@@ -1,0 +1,38 @@
+/* mensaje alerta*/
+#alert{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.m-0{
+    margin: 0;
+}
+/*estilos data process*/
+.success{ 
+    background-color: #629664;
+    color: white;
+}
+/*cargador*/
+.charger{
+    border-top: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: chargerAnime .5s infinite ease-in;
+}
+@keyframes chargerAnime {
+    to {
+        transform: rotate(360deg);
+        border-color: #2b532d;
+    }
+ }
+/*Estilos data incorrecta*/
+.error{
+    background-color: #ad3636;
+    color: white;
+}

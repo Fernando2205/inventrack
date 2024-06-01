@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" type="text/css" href="/header.css">
+    <link rel="stylesheet" type="text/css" href="/general-styles.css">
+    <link rel="stylesheet" type="text/css" href="/aside.css">
+</head>
+<body>
+    <main>
+        <header class="main_header">
+            <nav class="main_nav">
+                <input id="toggleChecker" type="checkbox">
+                <label id="togglerLable" for="toggleChecker">
+                    <div class="checkboxtoggler">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div>
+                </label>
+                <div class="profile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bell"></i>
+                    <img src="https://i0.wp.com/www.stignatius.co.uk/wp-content/uploads/2020/10/default-user-icon.jpg?fit=415%2C415&ssl=1"
+                        alt="Profile Picture">
+                    <p>User Name</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </nav>
+        </header>
+        <div class="containers">
+            <div class="lateral_side">
+                <a href="../dashboard/dashboard.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-table"></i>
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="../stock/instock.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-table-list"></i>
+                        <p>En stock</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <p>Productos</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <p>Ventas</p>
+                    </div>
+                </a>
+
+                <a href="../orders/orders.html">
+                    <div class="icons">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <p>Ordenes</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="icons">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Usuarios</p>
+                    </div>
+                </a>
+                <a href="../login/login.html">
+                    <div class="icons">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Salir</p>
+                    </div>
+                </a>
+            </div>
+            <div class="content">
+                <div class="page_content">
+                    <h1>Nuevo producto</h1>
+                    <form action="/validar" method="post"> <!-- //cuando se presiona el boton guardar se envia a la ruta validar -->
+                        <p>ID:</p>
+                        <input type="number" name="productID" id="productID" required><br><br>
+                    
+                        <p>Nombre del producto:</p>
+                        <input type="text" name="productName" id="productName"><br><br>
+
+                        <p>Precio del producto:</p>
+                        <input type="number" name="productPrice" id="productPrice"><br><br>
+
+                        <p>Categoria del producto:</p>
+                        <input type="text" name="productCategory" id="productCategory"><br><br>
+
+                        <p>Canal de ventas del producto:</p>
+                        <input type="text" name="productSC" id="productSC"><br><br>
+
+                        <p>Instrucciones del producto:</p>
+                        <select name="productInstruction" id="productInstruction">
+                            <option value="Revision">Revision</option>
+                            <option value="N/A">N/A</option>
+                        </select><br><br>
+
+                        <p>Cantidad:</p>
+                        <input type="number" name="productAmount" id="productAmount"><br><br>
+
+                        <p>Estado:</p>
+                        <select name="productStatus" id="productStatus">
+                            <option value="completo">Completo</option>
+                            <option value="incompleto">Faltante</option>
+                        </select><br><br>
+
+                        <input type="submit" value="Guardar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
+    <script src="/hideLateral.js"></script>
+</body>
+</html>

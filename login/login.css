@@ -1,0 +1,105 @@
+@import url(../css/general-styles.css);
+
+
+
+.login {
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    border-radius: 12px;
+    margin: auto;
+
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 20px 20px;
+    width: 40%;
+    max-width: 40%;
+    /* height: 100%; */
+    max-height: 100%;
+}
+
+label {
+    font-weight: 500;
+    color: #101540;
+}
+
+.input {
+    border-radius: 4px;
+    border: 1px solid #cac6c6;
+    background-color: #EDF0F2;
+    height: 60px;
+    padding-left: 10px;
+}
+
+/* input::placeholder {
+    padding-left: 10px;
+} */
+
+.login-btn {
+    border: none;
+    font-weight: 300;
+    border-radius: 6px;
+    height: 10%;
+    font-size: 14px;
+    color: white;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #101540;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+}
+
+.createAccount {
+    gap: 4px;
+    color: #131313;
+    font-weight: 600;
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.createAccount a {
+    color: #101540;
+    text-decoration: none;
+}
+
+
+.login form input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgb(198, 200, 202);
+    background-color: rgb(237, 240, 242);
+    height: 10%;
+    max-height: 10%;
+    padding-left: 10px;
+}
+
+
+
+
+.login form img {
+    width: 32px;
+    height: 32px;
+}
+
+.login-image {
+    padding: 20px 20px 20px 0;
+    width: 60%;
+    height: 100%;
+}
+
+.login-image img {
+
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+

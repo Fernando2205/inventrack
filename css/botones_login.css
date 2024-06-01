@@ -1,0 +1,78 @@
+/* Estilos para el botón de iniciar sesión google*/
+.login-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.54);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.login-button span {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.login-button span::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
+    background-size: cover;
+    margin-right: 8px;
+}
+/* Estilos para el botón de iniciar sesión facebook*/
+.fb-login-button-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b5998;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 5px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;
+    font-weight: bold;
+}
+
+.fb-login-button-custom:hover {
+    background-color: #2d4373;
+}
+
+.fb-logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+}
+/* botones*/
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.google-login, .facebook-login {
+    flex: 1;
+    margin: 5px;
+}

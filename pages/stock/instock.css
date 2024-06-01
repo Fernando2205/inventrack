@@ -1,0 +1,167 @@
+@import url(/css/general-styles.css);
+@import url(/css/header.css);
+@import url(/css/aside.css);
+
+main {
+    flex-direction: column;
+}
+
+.lateral_side {
+    background: linear-gradient(#1566C1, #2195F2);
+}
+
+.containers {
+    display: flex;
+    height: 90%;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.content {
+    width: 100%;
+    padding: 15px;
+}
+
+.page_content {
+    border-radius: 5px;
+    scrollbar-width: none;
+    background-color: white;
+    min-height: 100%;
+    padding: 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+.category {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+
+
+.order-buttons h2 {
+    font-size: 1.5rem;
+    color: #1565C0;
+}
+
+.order-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.new {
+    border: 2px solid #1565C0;
+    background-color: #1565C0;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/*filtros*/
+.filters {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.filters input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 40%;
+}
+
+#buttom-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#buttom-filter select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    background-color: #fff;
+}
+
+/*Search*/
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    min-width: 32rem;
+}
+
+.input {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 8px;
+    outline: none;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #777;
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #777;
+    width: 1rem;
+    height: 1rem;
+}
+
+/*Estilos para la tabla*/
+.order-table {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+    border-top: 1px solid rgb(207, 207, 207);
+}
+
+.order-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
