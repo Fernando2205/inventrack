@@ -213,9 +213,10 @@ main {
     padding: 18px;
     text-align: left;
     border-bottom: 1px solid #000000;
+
 }
 
-/*country*/
+/*tabla*/
 .new_orders {
     width: 100%;
     margin: 0 auto;
@@ -279,4 +280,5 @@ main {
 .new_orders form option {
     background-color: #fff;
     color: #333;
+
 }

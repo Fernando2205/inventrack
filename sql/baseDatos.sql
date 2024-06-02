@@ -35,4 +35,12 @@ CREATE TABLE products (
     PRIMARY KEY (id)
 );
 
-
+CREATE TABLE orders (
+    orderID INT PRIMARY KEY,
+    orderFecha DATE,
+    clientName VARCHAR(255),
+    orderSC VARCHAR(255),
+    orderDestiny VARCHAR(255),
+    orderAmount INT,
+    orderStatus VARCHAR(255)
+);
