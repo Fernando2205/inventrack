@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="/header.css">
     <link rel="stylesheet" type="text/css" href="/general-styles.css">
     <link rel="stylesheet" type="text/css" href="/aside.css">
-
 </head>
 
 <body>
@@ -87,7 +86,7 @@
                     <div class="order-buttons">
                         <h2>En Stock</h2>
                         <!-- <div class="buttons">
-                            <button class="new">+ Nuevo Stock</button>
+                            <button class="new">+ Nuevo Stock</button>     
                         </div> -->
                     </div>
                     <div class="filters">
@@ -114,6 +113,7 @@
                             <thead>
                                 <tr>
                                     <th><label><input type="checkbox"></label></th>
+                                    <th><label><input type="checkbox"></label></th>
                                     <th>Orden ID</th>
                                     <th>Producto</th>
                                     <th>Categoria</th>
@@ -125,15 +125,19 @@
                             </thead>
                             <tbody id="product-table-body">
                                 <!-- Las filas se insertarán aquí dinámicamente -->
+                            <tbody id="product-table-body">
+                                <!-- Las filas se insertarán aquí dinámicamente -->
                             </tbody>
                         </table>
                     </div>
+                
                 
                 </div>
             </div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
+    <script src="/hideLateral.js"></script>
     <script src="/hideLateral.js"></script>
     <script src="instock.js"></script>
     <script>
