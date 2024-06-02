@@ -1,6 +1,6 @@
-@import url(../../css/general-styles.css);
-@import url(../../css/header.css);
-@import url(../../css/aside.css);
+@import url(/css/general-styles.css);
+@import url(/css/header.css);
+@import url(/css/aside.css);
 
 main {
     flex-direction: column;

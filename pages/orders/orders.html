@@ -208,10 +208,43 @@
 
                 </div>
             </div>
+            <div class="new_orders">
+                <h1>Nueva orden</h1>
+                <form action="/validar" method="post"> <!-- //cuando se presiona el boton guardar se envia a la ruta validar -->
+                    <p>ID:</p>
+                    <input type="number" name="orderID" id="orderID" required><br><br>
+                
+                    <p>Fecha</p>
+                    <input type="date" name="orderFecha" id="orderFecha"><br><br>
+
+                    <p>Cliente</p>
+                    <input type="text" name="clientName" id="clientName"><br><br>
+
+                    <p>Canal de ventas del producto:</p>
+                    <input type="text" name="orderSC" id="orderSC"><br><br>
+
+                    <p>Destino:</p>
+                    <select name="orderDestiny" id="orderDestiny">
+                        <option value="Revision">Revision</option>
+                        <option value="N/A">N/A</option>
+                    </select><br><br>
+       
+                    <p>Articulos:</p>
+                    <input type="number" name="orderAmount" id="orderAmount"><br><br>
+
+                    <p>Estado:</p>
+                    <select name="orderStatus" id="orderStatus">
+                        <option value="completo">Completo</option>
+                        <option value="incompleto">Faltante</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Guardar">
+                </form>
+            </div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
     <script src="../../JS/hideLateral.js"></script>
-</body>
-
-</html>
+    <script src="../orders/orders.js"></script>
+    <script src="../../JS/hideLateral.js"></script>
+    <script src="../orders/orders.js"></script>

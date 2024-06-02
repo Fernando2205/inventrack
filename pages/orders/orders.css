@@ -213,4 +213,72 @@ main {
     padding: 18px;
     text-align: left;
     border-bottom: 1px solid #000000;
+
+}
+
+/*tabla*/
+.new_orders {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.new_orders h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.new_orders form {
+    width: 100%;
+}
+
+.new_orders form p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.new_orders form input[type="number"],
+.new_orders form input[type="text"] {
+    width: calc(100% - 20px); /* Restamos el padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.new_orders form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #172875;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new_orders form input[type="submit"]:hover {
+    background-color: #2f39c3;
+}
+.new_orders form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.new_orders form option {
+    background-color: #fff;
+    color: #333;
+
 }
