@@ -158,8 +158,6 @@
 
                     <p>Destino:</p>
                     <select name="orderDestiny" id="orderDestiny">
-                        <option value="Revision">Revision</option>
-                        <option value="N/A">N/A</option>
                     </select><br><br>
        
                     <p>Articulos:</p>
@@ -179,4 +177,28 @@
     <script src="https://kit.fontawesome.com/e93ccfb9a4.js" crossorigin="anonymous"></script>
     <script src="/hideLateral.js"></script>
     <script src="/orders/orders.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const select = document.getElementById("orderDestiny");
+
+            // Function to populate the select element with country options
+            function populateCountries() {
+                fetch("https://restcountries.com/v3.1/all")
+                    .then(response => response.json())
+                    .then(countries => {
+                        countries.forEach(country => {
+                            const option = document.createElement("option");
+                            option.value = country.name.common;
+                            option.textContent = country.name.common;
+                            select.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error('Error al cargar los países:', error));
+            }
+
+            // Populate the select element on page load
+            populateCountries();
+        });
+    </script>
+
 
