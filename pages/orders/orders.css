@@ -85,6 +85,11 @@ main {
     padding: 5px;
 }
 
+.new:hover{
+    cursor: pointer;
+    background-color: #9237c7;
+}
+
 .filters {
     display: flex;
     align-items: center;
@@ -216,16 +221,32 @@ main {
 
 }
 
-/*tabla*/
+/*form*/
 .new_orders {
     width: 100%;
-    margin: 0 auto;
+    max-width: 500px; /* Ajusta esto a la anchura máxima que desees para tu formulario */
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ajusta esto al color de fondo que desees para tu formulario */
+    border-radius: 5px;
+    box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.61);
+    max-height: 90vh; /* Ajusta esto a la altura máxima que desees para tu formulario */
+    overflow-y: auto;
 }
 
+.new_order_title{
+    display: flex;
+}
+.fa-x{
+    margin-left: auto;
+    font-size: 1.0rem;
+    color: #333;
+    cursor: pointer;
+}
 .new_orders h1 {
     text-align: center;
     color: #333;
@@ -234,6 +255,7 @@ main {
 
 .new_orders form {
     width: 100%;
+    overflow: auto;
 }
 
 .new_orders form p {
@@ -242,7 +264,8 @@ main {
 }
 
 .new_orders form input[type="number"],
-.new_orders form input[type="text"] {
+.new_orders form input[type="text"],
+.new_orders form input[type="date"] {
     width: calc(100% - 20px); /* Restamos el padding */
     padding: 10px;
     margin-bottom: 15px;
