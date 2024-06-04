@@ -1,7 +1,11 @@
-const express = require('express');
-const path = require('path');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
+//Es un servidor creado con Node.js que usa Express.js (una herramienta de Node.js) para gestionar las solicitudes que se hacen desde internet.
+
+
+//importando cuatro módulos 
+const express = require('express');//servidor
+const path = require('path');//traer las rutas de archivos
+const mysql = require('mysql');//interactuar con la base de datos
+const bodyParser = require('body-parser');//obtener datos de formularios
 
 const app = express();
 
@@ -28,10 +32,10 @@ conexion.connect((err) => {
 });
 
 // Configuración de body-parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));//urlendcode es para decir como queremos que espere los datos, en este caso que los espere como string--extend es para determinar el tipo de libreria -- false: querystring - true:qs
 app.use(bodyParser.json());
 
-// Rutas para páginas
+// Rutas para páginas --- solicitudes get--Cuando el servidor recibe una solicitud GET a la ruta '/products', responde enviando el archivo 'products.
 app.get('/products', function(req, res) {
     res.sendFile(path.join(__dirname, '..', 'pages', 'products', 'products.html'));
 });
@@ -66,7 +70,7 @@ app.get('/orders-data', (req, res) => {
 });
 
 // Ruta para manejar la solicitud del formulario de productos
-app.post("/validar", function(req, res){
+app.post("/products", function(req, res){
     const datos = req.body;
 
     let ID = datos.productID;
@@ -86,13 +90,16 @@ app.post("/validar", function(req, res){
             if (row.length > 0) {
                 console.log("No se puede registrar, el ID ya existe");
             } else {
-                let registrar = "INSERT INTO products(id, productName, productPrice, productCategory, productSalesChannel, productInstruction, productAmount, productStatus) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                conexion.query(registrar, [ID, name, price, category, channel, instruction, amount, status], function(error) {
-                    if (error) {
+                let registrar = "INSERT INTO products(id,productName,productPrice,productCategory,productSalesChannel,productInstruction,productAmount,productStatus) VALUES ('"+ID+"' , '"+name+"' , '"+price+"' , '"+category+"','"+channel +"','"+instruction+"','"+amount+"','"+status+"')";
+
+                conexion.query(registrar, function(error){
+                    if(error){
                         throw error;
-                    } else {
+                    }else{
                         console.log("datos almacenados correctamente");
-                        res.redirect("/instock");
+                
+                        // Redireccionas al usuario a stock.html
+                        res.redirect("/instock");                    
                     }
                 });
             }
@@ -112,7 +119,7 @@ app.post("/orders", function(req, res) {
     let orderAmount = datos.orderAmount;
     let orderStatus = datos.orderStatus;
 
-    let registrar = "INSERT INTO orders(orderID, orderFecha, clientName, orderSC, orderDestiny, orderAmount, orderStatus) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    let registrar = "INSERT INTO orders(orderID, orderFecha, clientName, orderSC, orderDestiny, orderAmount, orderStatus) VALUES ('"+orderID+"' , '"+orderFecha+"' , '"+clientName+"' , '"+orderSC+"','"+orderDestiny +"','"+orderAmount+"','"+orderStatus+"')";
     conexion.query(registrar, [orderID, orderFecha, clientName, orderSC, orderDestiny, orderAmount, orderStatus], function(error) {
         if (error) {
             throw error;
