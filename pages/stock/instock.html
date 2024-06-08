@@ -67,12 +67,7 @@
                         <p>Ordenes</p>
                     </div>
                 </a>
-                <a href="">
-                    <div class="icons">
-                        <i class="fa-solid fa-users"></i>
-                        <p>Usuarios</p>
-                    </div>
-                </a>
+
                 <a href="../login/login.html">
                     <div class="icons">
                         <i class="fa-solid fa-right-from-bracket"></i>
@@ -139,12 +134,12 @@
     <script>
         // Función para cargar los datos de la tabla "products"
         function loadProducts() {
-            fetch('/instock-data')
-                .then(response => response.json())
-                .then(data => {
-                    const tbody = document.getElementById('product-table-body');
+            fetch('/instock-data')//fecth hace una solicitud a la rta instock-data
+                .then(response => response.json())//se convierte en json para que js ppueda leerlo--pasa de formato texto a formato objeto js (json)
+                .then(data => {//cuando los datos esten listos despues de la solicitud , los llamamos data
+                    const tbody = document.getElementById('product-table-body');//en la variabke tbody guardamos la tabla
                     tbody.innerHTML = ''; // Limpiar el contenido existente
-                    data.forEach(product => {
+                    data.forEach(product => {//el parametro es 
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <th><label><input type="checkbox"></label></th>

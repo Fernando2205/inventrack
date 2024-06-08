@@ -1,7 +1,7 @@
 <?php
 //Este archivo muestra una lista de todos los usuarios registrados en la base de datos.
 // Incluye el archivo de configuración que establece la conexión con la base de datos
-include('config.php');
+include('../config.php');
 
 // Crea una consulta SQL para seleccionar todos los registros de la tabla 'users'
 $sql = "SELECT * FROM facebook_users";
